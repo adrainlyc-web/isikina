@@ -147,7 +147,7 @@ section{padding:60px 20px;}
   border:1px solid var(--border);background:var(--bg-panel);
 }
 .slider-track{display:flex;transition:transform .5s ease;}
-.slider-track img{width:100%;flex-shrink:0;display:block;}
+.slider-track img{width:100%;flex-shrink:0;display:block;aspect-ratio:1200/524;object-fit:cover;}
 .slider-btn{
   position:absolute;top:50%;transform:translateY(-50%);
   background:rgba(10,9,8,0.65);color:var(--gold-bright);border:1px solid var(--gold);
