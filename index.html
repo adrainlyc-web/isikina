@@ -71,23 +71,19 @@
 
 <main id="top">
 
-  <section class="hero">
-    <div class="bonus-slider" id="bonus-slider">
-      <div class="bonus-slider-track" id="bonus-slider-track">
-        <a class="bonus-slide-img" href="https://tinyurl.com/isikina-event" target="_blank" rel="noopener">
-          <img src="images/banners/welcome-bonus.jpg" alt="100% Welcome Bonus, new players only, join now" width="700" height="592" fetchpriority="high">
-        </a>
-        <a class="bonus-slide-img" href="https://tinyurl.com/isikina-event" target="_blank" rel="noopener">
-          <img src="images/banners/free-credit.jpg" alt="918Kaya Free Credit, start winning for free, claim now" width="700" height="592" loading="lazy">
-        </a>
-        <a class="bonus-slide-img" href="https://tinyurl.com/isikina-event" target="_blank" rel="noopener">
-          <img src="images/banners/daily-rebate.jpg" alt="Isikina Daily Rebate 5 percent, get cashback every day, play now" width="700" height="592" loading="lazy">
-        </a>
+  <section class="hero" id="games">
+    <div class="slider" id="game-slider">
+      <div class="slider-track" id="slider-track">
+        <img src="images/app-screenshots/screen-3.jpg" alt="918Kaya game lobby screenshot 1" width="1200" height="524" fetchpriority="high">
+        <img src="images/app-screenshots/screen-4.jpg" alt="918Kaya game lobby screenshot 2" width="1200" height="524" loading="lazy">
+        <img src="images/app-screenshots/screen-5.jpg" alt="918Kaya game lobby screenshot 3" width="1200" height="524" loading="lazy">
+        <img src="images/app-screenshots/screen-6.jpg" alt="918Kaya game lobby screenshot 4" width="1200" height="524" loading="lazy">
+        <img src="images/app-screenshots/screen-7.jpg" alt="918Kaya game lobby screenshot 5" width="1200" height="524" loading="lazy">
       </div>
-      <button class="slider-btn prev" id="bonus-slider-prev" aria-label="Previous bonus">‹</button>
-      <button class="slider-btn next" id="bonus-slider-next" aria-label="Next bonus">›</button>
+      <button class="slider-btn prev" id="slider-prev" aria-label="Previous screenshot">‹</button>
+      <button class="slider-btn next" id="slider-next" aria-label="Next screenshot">›</button>
     </div>
-    <div class="slider-dots" id="bonus-slider-dots"></div>
+    <div class="slider-dots" id="slider-dots"></div>
     <p class="tagline">Easy to Win · 24 Hours</p>
     <h1>Isikina — Papua New Guinea Online Casino on WhatsApp</h1>
     <p class="sub">Message us on WhatsApp to deposit, claim your free credit, or get your 918Kaya game ID. No registration form, no waiting — just chat and play.</p>
@@ -180,22 +176,6 @@
     </div>
   </section>
 
-  <section id="games">
-    <h2 class="section-title">Games on 918Kaya</h2>
-    <p class="section-sub">Real screenshots from the 918Kaya app — swipe or wait to see more of the game lobby.</p>
-    <div class="slider" id="game-slider">
-      <div class="slider-track" id="slider-track">
-        <img src="images/app-screenshots/screen-3.jpg" alt="918Kaya game lobby screenshot 1" width="1200" height="524" loading="lazy">
-        <img src="images/app-screenshots/screen-4.jpg" alt="918Kaya game lobby screenshot 2" width="1200" height="524" loading="lazy">
-        <img src="images/app-screenshots/screen-5.jpg" alt="918Kaya game lobby screenshot 3" width="1200" height="524" loading="lazy">
-        <img src="images/app-screenshots/screen-6.jpg" alt="918Kaya game lobby screenshot 4" width="1200" height="524" loading="lazy">
-        <img src="images/app-screenshots/screen-7.jpg" alt="918Kaya game lobby screenshot 5" width="1200" height="524" loading="lazy">
-      </div>
-      <button class="slider-btn prev" id="slider-prev" aria-label="Previous screenshot">‹</button>
-      <button class="slider-btn next" id="slider-next" aria-label="Next screenshot">›</button>
-    </div>
-    <div class="slider-dots" id="slider-dots"></div>
-  </section>
 
   <script>
   (function(){
@@ -225,38 +205,6 @@
 
     document.getElementById('slider-next').addEventListener('click', function(){ next(); resetTimer(); });
     document.getElementById('slider-prev').addEventListener('click', function(){ prev(); resetTimer(); });
-    resetTimer();
-  })();
-  </script>
-
-  <script>
-  (function(){
-    var track = document.getElementById('bonus-slider-track');
-    var slides = track.children.length;
-    var dotsWrap = document.getElementById('bonus-slider-dots');
-    var index = 0;
-    var timer;
-
-    for (var i = 0; i < slides; i++) {
-      var dot = document.createElement('button');
-      dot.setAttribute('aria-label', 'Go to bonus ' + (i + 1));
-      if (i === 0) dot.className = 'active';
-      dot.addEventListener('click', function(idx){ return function(){ goTo(idx); resetTimer(); }; }(i));
-      dotsWrap.appendChild(dot);
-    }
-
-    function update() {
-      track.style.transform = 'translateX(-' + (index * 100) + '%)';
-      var dots = dotsWrap.children;
-      for (var i = 0; i < dots.length; i++) dots[i].className = (i === index) ? 'active' : '';
-    }
-    function goTo(i) { index = (i + slides) % slides; update(); }
-    function next() { goTo(index + 1); }
-    function prev() { goTo(index - 1); }
-    function resetTimer() { clearInterval(timer); timer = setInterval(next, 4000); }
-
-    document.getElementById('bonus-slider-next').addEventListener('click', function(){ next(); resetTimer(); });
-    document.getElementById('bonus-slider-prev').addEventListener('click', function(){ prev(); resetTimer(); });
     resetTimer();
   })();
   </script>
