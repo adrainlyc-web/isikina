@@ -20,11 +20,8 @@ A single-page marketing site for Isikina (WhatsApp-based 918Kaya deposit agent, 
 3. Framework Preset: leave as **Other** (the `vercel.json` file already forces this).
 4. Click **Deploy**. Vercel gives you a free `something.vercel.app` URL immediately.
 
-### 3. Buy your domain later (through Vercel)
-When you're ready:
-1. In the Vercel project → **Settings → Domains**.
-2. Type the domain you want (e.g. `isikina.com`) and follow the "Buy" flow — Vercel becomes the registrar, same as pngcasinoking.com.
-3. Once bought, tell me the final domain and I'll update the placeholder `isikina.vercel.app` URLs in the code (canonical tag, sitemap, robots.txt, Open Graph tags) to match.
+### 3. Domain
+Live at **https://www.isikina.com/** — canonical tags, sitemap, robots.txt, and Open Graph tags all point here.
 
 ### 4. After that's live
 - Submit the site to Google Search Console + Google Analytics (same steps as pngcasinoking.com).
