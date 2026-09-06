@@ -72,7 +72,31 @@
 <main id="top">
 
   <section class="hero">
-    <img class="logo" src="images/isikina-logo-hero.webp" alt="Isikina — Easy to Win, 24 Hours" width="520" height="402" fetchpriority="high">
+    <div class="bonus-slider" id="bonus-slider">
+      <div class="bonus-slider-track" id="bonus-slider-track">
+        <div class="bonus-slide slide-red">
+          <div class="bonus-icon">🎰</div>
+          <div class="bonus-title">100% Welcome Bonus</div>
+          <div class="bonus-sub">5x wagering on your deposit + bonus combined</div>
+          <a class="btn btn-primary" href="https://tinyurl.com/isikina-event" target="_blank" rel="noopener">Claim Now</a>
+        </div>
+        <div class="bonus-slide slide-gold">
+          <div class="bonus-icon">💰</div>
+          <div class="bonus-title">Free K15 Credit</div>
+          <div class="bonus-sub">No deposit needed — claim up to twice daily</div>
+          <a class="btn btn-primary" href="https://tinyurl.com/isikina-event" target="_blank" rel="noopener">Claim Now</a>
+        </div>
+        <div class="bonus-slide slide-dark">
+          <div class="bonus-icon">⚡</div>
+          <div class="bonus-title">Instant 918Kaya Game ID</div>
+          <div class="bonus-sub">No registration — available 24 hours</div>
+          <a class="btn btn-primary" href="https://tinyurl.com/isikina-event" target="_blank" rel="noopener">Chat Now</a>
+        </div>
+      </div>
+      <button class="slider-btn prev" id="bonus-slider-prev" aria-label="Previous bonus">‹</button>
+      <button class="slider-btn next" id="bonus-slider-next" aria-label="Next bonus">›</button>
+    </div>
+    <div class="slider-dots" id="bonus-slider-dots"></div>
     <p class="tagline">Easy to Win · 24 Hours</p>
     <h1>Isikina — Papua New Guinea Online Casino on WhatsApp</h1>
     <p class="sub">Message us on WhatsApp to deposit, claim your free credit, or get your 918Kaya game ID. No registration form, no waiting — just chat and play.</p>
@@ -202,6 +226,38 @@
 
     document.getElementById('slider-next').addEventListener('click', function(){ next(); resetTimer(); });
     document.getElementById('slider-prev').addEventListener('click', function(){ prev(); resetTimer(); });
+    resetTimer();
+  })();
+  </script>
+
+  <script>
+  (function(){
+    var track = document.getElementById('bonus-slider-track');
+    var slides = track.children.length;
+    var dotsWrap = document.getElementById('bonus-slider-dots');
+    var index = 0;
+    var timer;
+
+    for (var i = 0; i < slides; i++) {
+      var dot = document.createElement('button');
+      dot.setAttribute('aria-label', 'Go to bonus ' + (i + 1));
+      if (i === 0) dot.className = 'active';
+      dot.addEventListener('click', function(idx){ return function(){ goTo(idx); resetTimer(); }; }(i));
+      dotsWrap.appendChild(dot);
+    }
+
+    function update() {
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      var dots = dotsWrap.children;
+      for (var i = 0; i < dots.length; i++) dots[i].className = (i === index) ? 'active' : '';
+    }
+    function goTo(i) { index = (i + slides) % slides; update(); }
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+    function resetTimer() { clearInterval(timer); timer = setInterval(next, 4000); }
+
+    document.getElementById('bonus-slider-next').addEventListener('click', function(){ next(); resetTimer(); });
+    document.getElementById('bonus-slider-prev').addEventListener('click', function(){ prev(); resetTimer(); });
     resetTimer();
   })();
   </script>

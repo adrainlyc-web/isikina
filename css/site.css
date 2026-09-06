@@ -116,8 +116,26 @@ header{
     linear-gradient(180deg,#0a0908,#120f0c);
   border-bottom:1px solid var(--border);
 }
-.hero img.logo{max-width:260px;margin:0 auto 22px;}
-@media (max-width:480px){ .hero img.logo{max-width:170px;} }
+.bonus-slider{
+  position:relative;max-width:520px;margin:0 auto 14px;border-radius:16px;overflow:hidden;
+  border:1px solid var(--gold);
+}
+.bonus-slider-track{display:flex;transition:transform .5s ease;}
+.bonus-slide{
+  min-width:100%;padding:36px 24px;text-align:center;
+}
+.slide-red{background:linear-gradient(135deg,#4a1014,#7a1319);}
+.slide-gold{background:linear-gradient(135deg,#2e2308,#5c4712);}
+.slide-dark{background:linear-gradient(135deg,#1b1815,#141210);}
+.bonus-icon{font-size:2.2rem;margin-bottom:10px;}
+.bonus-title{color:var(--gold-bright);font-weight:800;font-size:1.4rem;margin-bottom:6px;}
+.bonus-sub{color:var(--text-dim);font-size:0.92rem;margin-bottom:20px;}
+.bonus-slider .btn{padding:11px 24px;font-size:0.92rem;}
+@media (max-width:480px){
+  .bonus-slide{padding:28px 20px;}
+  .bonus-icon{font-size:1.8rem;}
+  .bonus-title{font-size:1.15rem;}
+}
 .hero h1{
   font-size:clamp(1.7rem,4.2vw,2.6rem);
   margin:0 0 10px;
