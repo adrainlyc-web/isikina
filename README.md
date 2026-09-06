@@ -31,4 +31,13 @@ When you're ready:
 - Every future push to the GitHub repo's `main` branch auto-redeploys — no manual redeploy step needed.
 
 ## Editing content later
-Everything is in one file, `index.html` — bonus terms, WhatsApp link, FAQ text, and games list are all plain HTML you (or I) can edit directly. If Isikina's bonus terms or minimum deposit/withdrawal ever change, update them here to keep this page accurate.
+The landing page's content is in `index.html` — bonus terms, WhatsApp link, FAQ text, and games list are all plain HTML you (or I) can edit directly. If Isikina's bonus terms or minimum deposit/withdrawal ever change, update them here to keep this page accurate.
+
+## Blog
+- `css/site.css` — shared styling for every page (landing page + blog), so new pages stay visually consistent without copy-pasting a big style block each time.
+- `blog/index.html` — the blog listing page.
+- `blog/<slug>.html` — one file per post.
+- `keywords.csv` — upcoming keyword ideas for future posts (Isikina-brand and how-to-use angles, deliberately different from the generic PNG-casino terms pngcasinoking.com already targets, to avoid the two sites competing against each other in search).
+- `used-keywords.md` — tracks which keywords are already live and where, so a future post doesn't duplicate one that already exists.
+
+To add a new post: pick the next keyword from `keywords.csv`, write a new `blog/<slug>.html` (copy the structure of `blog/how-to-join-isikina-casino.html` — title/meta/OG tags, breadcrumb, TOC, FAQ with matching JSON-LD), add a card for it to `blog/index.html`, add its URL to `sitemap.xml`, and mark the keyword "Live" in `used-keywords.md`.
