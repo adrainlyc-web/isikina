@@ -65,7 +65,31 @@ header{
 .nav-links a{text-decoration:none;color:var(--text-dim);}
 .nav-links a:hover{color:var(--gold);}
 .btn-wa-small{background:linear-gradient(135deg,#25D366,#1ea952);color:#04150a;padding:9px 16px;border-radius:999px;font-weight:700;text-decoration:none;font-size:0.9rem;white-space:nowrap;}
+.header-actions{display:flex;align-items:center;gap:10px;}
+.header-social{
+  width:34px;height:34px;border-radius:50%;border:1.5px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  transition:background .15s ease;
+}
+.header-social svg{width:16px;height:16px;fill:var(--gold-bright);}
+.header-social:hover{background:var(--gold);}
+.header-social:hover svg{fill:#0a0908;}
 @media (max-width:720px){ .nav-links{display:none;} }
+@media (max-width:420px){ .header-social{display:none;} }
+
+/* Follow section */
+.follow-section{background:linear-gradient(180deg,#120f0c,#0a0908);border-bottom:1px solid var(--border);}
+.follow-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:0 auto;}
+.follow-card{
+  display:flex;align-items:center;gap:16px;
+  background:var(--bg-panel);border:1.5px solid var(--gold);border-radius:14px;
+  padding:22px;text-decoration:none;color:var(--text);transition:transform .15s ease,background .15s ease;
+}
+.follow-card:hover{transform:translateY(-3px);background:var(--bg-panel-2);}
+.follow-card svg{width:36px;height:36px;fill:var(--gold-bright);flex-shrink:0;}
+.follow-card strong{display:block;color:var(--gold-bright);font-size:1.02rem;margin-bottom:2px;}
+.follow-card span{color:var(--text-dim);font-size:0.85rem;line-height:1.4;}
+@media (max-width:600px){ .follow-grid{grid-template-columns:1fr;} }
 
 /* Hero */
 .hero{
