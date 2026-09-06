@@ -115,20 +115,52 @@
 
   <section id="games">
     <h2 class="section-title">Games on 918Kaya</h2>
-    <p class="section-sub">A few of the titles available once you have your game ID — 918Kaya's full catalog is larger.</p>
-    <div class="game-grid">
-      <div class="game-chip"><img src="images/games/fortune-tiger.jpg" alt="Fortune Tiger slot game on 918Kaya" width="500" height="330" loading="lazy"><span>Fortune Tiger</span></div>
-      <div class="game-chip"><img src="images/games/monkey-king.jpg" alt="Monkey King slot game on 918Kaya" width="500" height="330" loading="lazy"><span>Monkey King</span></div>
-      <div class="game-chip"><img src="images/games/frost-queen.jpg" alt="Frost Queen slot game on 918Kaya" width="500" height="330" loading="lazy"><span>Frost Queen</span></div>
-      <div class="game-chip"><img src="images/games/dragon-hero.jpg" alt="Dragon Hero slot game on 918Kaya" width="500" height="330" loading="lazy"><span>Dragon Hero</span></div>
-      <div class="game-chip"><img src="images/games/ocean-king-iii.jpg" alt="Ocean King III King of Monster slot game on 918Kaya" width="500" height="330" loading="lazy"><span>Ocean King III</span></div>
-      <div class="game-chip"><img src="images/games/great-88.jpg" alt="Great 88 slot game on 918Kaya" width="500" height="330" loading="lazy"><span>Great 88</span></div>
-      <div class="game-chip"><img src="images/games/triple-twister.jpg" alt="Triple Twister slot game on 918Kaya" width="500" height="330" loading="lazy"><span>Triple Twister</span></div>
-      <div class="game-chip"><img src="images/games/iceland.jpg" alt="Iceland slot game on 918Kaya" width="500" height="330" loading="lazy"><span>Iceland</span></div>
-      <div class="game-chip"><img src="images/games/caishens-gold.jpg" alt="Caishen's Gold slot game on 918Kaya" width="500" height="330" loading="lazy"><span>Caishen's Gold</span></div>
-      <div class="game-chip"><img src="images/games/lucky-koi.jpg" alt="Lucky Koi slot game on 918Kaya" width="500" height="330" loading="lazy"><span>Lucky Koi</span></div>
+    <p class="section-sub">Real screenshots from the 918Kaya app — swipe or wait to see more of the game lobby.</p>
+    <div class="slider" id="game-slider">
+      <div class="slider-track" id="slider-track">
+        <img src="images/app-screenshots/screen-3.jpg" alt="918Kaya game lobby screenshot 1" width="1400" height="782" loading="lazy">
+        <img src="images/app-screenshots/screen-4.jpg" alt="918Kaya game lobby screenshot 2" width="1400" height="782" loading="lazy">
+        <img src="images/app-screenshots/screen-5.jpg" alt="918Kaya game lobby screenshot 3" width="1400" height="782" loading="lazy">
+        <img src="images/app-screenshots/screen-6.jpg" alt="918Kaya game lobby screenshot 4" width="1400" height="782" loading="lazy">
+        <img src="images/app-screenshots/screen-7.jpg" alt="918Kaya game lobby screenshot 5" width="1400" height="782" loading="lazy">
+      </div>
+      <button class="slider-btn prev" id="slider-prev" aria-label="Previous screenshot">‹</button>
+      <button class="slider-btn next" id="slider-next" aria-label="Next screenshot">›</button>
     </div>
+    <div class="slider-dots" id="slider-dots"></div>
   </section>
+
+  <script>
+  (function(){
+    var track = document.getElementById('slider-track');
+    var slides = track.children.length;
+    var dotsWrap = document.getElementById('slider-dots');
+    var index = 0;
+    var timer;
+
+    for (var i = 0; i < slides; i++) {
+      var dot = document.createElement('button');
+      dot.setAttribute('aria-label', 'Go to screenshot ' + (i + 1));
+      if (i === 0) dot.className = 'active';
+      dot.addEventListener('click', function(idx){ return function(){ goTo(idx); resetTimer(); }; }(i));
+      dotsWrap.appendChild(dot);
+    }
+
+    function update() {
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      var dots = dotsWrap.children;
+      for (var i = 0; i < dots.length; i++) dots[i].className = (i === index) ? 'active' : '';
+    }
+    function goTo(i) { index = (i + slides) % slides; update(); }
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+    function resetTimer() { clearInterval(timer); timer = setInterval(next, 4500); }
+
+    document.getElementById('slider-next').addEventListener('click', function(){ next(); resetTimer(); });
+    document.getElementById('slider-prev').addEventListener('click', function(){ prev(); resetTimer(); });
+    resetTimer();
+  })();
+  </script>
 
   <section id="download">
     <h2 class="section-title">Download 918Kaya</h2>
