@@ -9,7 +9,7 @@ Tracks which keywords from `keywords.csv` have been targeted, to avoid cannibali
 | how to join Isikina casino | Live | blog/how-to-join-isikina-casino.html |
 | Isikina free credit guide | Live | blog/isikina-free-credit-guide.html |
 | how to get 918Kaya game ID | Live | blog/how-to-get-918kaya-game-id.html |
-| Isikina deposit via WhatsApp | Not started | — |
+| Isikina deposit via WhatsApp | Live | blog/isikina-deposit-via-whatsapp.html |
 | how to withdraw winnings Isikina | Not started | — |
 | 918Kaya games list | Not started | — |
 | Isikina WhatsApp casino | Not started | — |
