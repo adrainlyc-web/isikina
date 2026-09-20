@@ -12,5 +12,5 @@ Tracks which keywords from `keywords.csv` have been targeted, to avoid cannibali
 | Isikina deposit via WhatsApp | Live | blog/isikina-deposit-via-whatsapp.html |
 | how to withdraw winnings Isikina | Not started | — |
 | 918Kaya games list | Not started | — |
-| Isikina WhatsApp casino | Not started | — |
+| Isikina WhatsApp casino | Live | blog/isikina-whatsapp-casino.html |
 | is Isikina legit | Not started | — |
