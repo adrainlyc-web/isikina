@@ -14,3 +14,5 @@ Tracks which keywords from `keywords.csv` have been targeted, to avoid cannibali
 | 918Kaya games list | Not started | — |
 | Isikina WhatsApp casino | Live | blog/isikina-whatsapp-casino.html |
 | is Isikina legit | Not started | — |
+
+**2026-09-23:** `isikina-deposit-via-whatsapp.html` updated with SMS-banking/Kina WhatsApp-banking receipt details (the fact confirmed 2026-09-20 on the Kundu365/Kago365 deposit guides, carried over here for the first time) — new FAQ entry added, Step 3 and the "why no bank details" section expanded. Also pushed 3 older posts that had been committed locally since 2026-09-17/20 but never actually reached GitHub/Vercel: `isikina-deposit-via-whatsapp.html`, `how-to-get-918kaya-game-id.html`, `isikina-whatsapp-casino.html`. All 4 commits now live on `main`, Vercel auto-deploy triggered.
