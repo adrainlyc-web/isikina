@@ -10,10 +10,12 @@ Tracks which keywords from `keywords.csv` have been targeted, to avoid cannibali
 | Isikina free credit guide | Live | blog/isikina-free-credit-guide.html |
 | how to get 918Kaya game ID | Live | blog/how-to-get-918kaya-game-id.html |
 | Isikina deposit via WhatsApp | Live | blog/isikina-deposit-via-whatsapp.html |
-| how to withdraw winnings Isikina | Not started | — |
+| how to withdraw winnings Isikina | Live (generated 2026-10-06) | blog/how-to-withdraw-winnings-isikina.html |
 | 918Kaya games list | Not started | — |
 | Isikina WhatsApp casino | Live | blog/isikina-whatsapp-casino.html |
 | is Isikina legit | Not started | — |
 | Isikina vs PNG online pokies websites | Live (generated 2026-10-02, user-requested topic) | blog/isikina-vs-png-online-pokies-websites.html |
 
 **2026-09-23:** `isikina-deposit-via-whatsapp.html` updated with SMS-banking/Kina WhatsApp-banking receipt details (the fact confirmed 2026-09-20 on the Kundu365/Kago365 deposit guides, carried over here for the first time) — new FAQ entry added, Step 3 and the "why no bank details" section expanded. Also pushed 3 older posts that had been committed locally since 2026-09-17/20 but never actually reached GitHub/Vercel: `isikina-deposit-via-whatsapp.html`, `how-to-get-918kaya-game-id.html`, `isikina-whatsapp-casino.html`. All 4 commits now live on `main`, Vercel auto-deploy triggered.
+
+**2026-10-06 withdrawal rule (user-confirmed):** normal deposits carry 2x turnover; minimum withdrawal = 2x the deposit, floor K50 (K10-K24 deposit -> K50, K50 -> K100, K100 -> K200). Payment is bank transfer, timing same as Kundu365 (usually under 24 hours). Welcome bonus keeps its own 5x on deposit+bonus. Older posts that said only "K50 minimum withdrawal" were updated to match.
